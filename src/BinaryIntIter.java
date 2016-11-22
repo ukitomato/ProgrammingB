@@ -47,7 +47,7 @@ public class BinaryIntIter
             int key = Integer.parseInt(line);
 
             int p; // position
-            p = binarySearch(myArray, 0, myArray.length-1, key); // -1は無いのが正しい．
+            p = binarySearch(myArray, 0, myArray.length, key); // -1は無いのが正しい．
             if (p == -1) {
                 System.out.println("Not Found");
             }
