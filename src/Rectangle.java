@@ -1,35 +1,46 @@
-public class Rectangle {
-    int width;
-    int height;
+// Rectangle.java
+public class Rectangle extends GeometricObject {
+    private double width;
+    private double height;
 
-    Rectangle() {
-        setSize(10, 20);
+    public Rectangle() {
     }
 
-    void setSize(int w, int h) {
-        width = w;
-        height = h;
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
     }
 
-    int getArea() {
+    public Rectangle(double width, double height, String color, boolean filled) {
+        this.width = width;
+        this.height = height;
+        setColor(color);
+        setFilled(filled);
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public double getArea() {
+        // Write your code here
         return width * height;
     }
 
-    boolean areSame(Rectangle a) {
-        if (a == null || this == null) {
-            return false;
-        }
-        else if (a.width == this.width && a.height == this.height) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
-    public static void main(String[] args) {
-        Rectangle r1 = new Rectangle();
-        Rectangle r2 = new Rectangle();
-        System.out.println(r1.areSame(r2));
+    public double getPerimeter() {
+        // Write your code here
+        return 2 * (width + height);
     }
 }
